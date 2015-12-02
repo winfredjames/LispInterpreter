@@ -15,7 +15,7 @@ import java.util.Stack;
 public class Intepreter {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		String s = "";
 		String input = "";
 		boolean breakflag = false;
@@ -48,7 +48,7 @@ public class Intepreter {
 	}
 
 	public static void scannerfunction(String input) {
-		// TODO Auto-generated method stub
+
 		if (input.length() == 0) {
 			System.out.println(" No input found ");
 			return;
@@ -99,6 +99,7 @@ public class Intepreter {
 	}
 
 	public static boolean isAtomic(String input) {
+	
 		input = input.toUpperCase();
 		if (input.matches("[+-]?\\d{1,10}$") || input.matches("[A-Z0-9]{1,10}")
 				|| input.matches("[A-Z]{1,10}")) {
@@ -111,6 +112,7 @@ public class Intepreter {
 	}
 
 	public static boolean errorchecker(String[] resultOne) {
+	
 		int counter = 0;
 		for (int i = 0; i < resultOne.length; i++) {
 			if (resultOne[i].equals("(")) {
@@ -170,6 +172,7 @@ public class Intepreter {
 	}
 
 	public static boolean validate(String input) {
+	
 		if (input.matches("[^A-Z0-9.()]*")) {
 			System.out.println("Error: Invalid Character  " + input);
 			return false;
@@ -236,11 +239,7 @@ class InterpretIt {
 	public static final int max_allowed = 100000;
 
 	public void mainengine(String[] result) {
-		// TODO Auto-generated method stub
-		// String ip ="( ( a b c d) ( d e f ) ( ( g h ) ( i j ) ) )";
-		// String ip="( ( ( ) ) )";
-		// String[] result = ip.split("\\s+");
-		// Validation validate = new Validation();
+
 		int n = result.length;
 		Node root = new Node("");
 		boolean stop = true;
@@ -254,13 +253,11 @@ class InterpretIt {
 				if (result1 == null) {
 					System.out.println("NIL");
 				} else {
-					// System.out.println();
 					print(result1);
 					System.out.println("");
 				}
 			}
 		} catch (Exit_exception e) {
-			// TODO Auto-generated catch block
 
 		}
 
@@ -416,7 +413,6 @@ class InterpretIt {
 			if (curr.data != "") {
 				if (!curr.data.equals("NIL")) {
 					System.out.print(curr.data);
-					// System.out.print(". ");
 
 				} else {
 					System.out.print(curr.data);
