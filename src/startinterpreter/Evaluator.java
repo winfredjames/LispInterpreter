@@ -1,5 +1,4 @@
 package startinterpreter;
-//influencd from https://github.com/vivekratnavel/Lisp-Interpreter/blob/master/src/myint/Interpreter.java
 import java.util.HashSet;
 
 class Exit_exception extends Exception {
@@ -620,3 +619,4 @@ public class Evaluator {
 		return result;
 	}
 }
+//influencd from https://github.com/vivekratnavel/Lisp-Interpreter/blob/master/src/myint/Interpreter.java
