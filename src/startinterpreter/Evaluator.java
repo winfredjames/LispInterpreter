@@ -619,4 +619,3 @@ public class Evaluator {
 		return result;
 	}
 }
-//influencd from https://github.com/vivekratnavel/Lisp-Interpreter/blob/master/src/myint/Interpreter.java
